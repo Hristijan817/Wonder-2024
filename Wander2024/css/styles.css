@@ -1,0 +1,370 @@
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b2d42, #1d202f, #191923, #0d0f18);
+  color: #eaeaea;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.9);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-family: 'Lobster', cursive;
+  color: #ff6b6b;
+}
+
+.logo span {
+  color: #fcb045;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #eaeaea;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+  color: #ff6b6b;
+}
+
+/* Dropdown */
+.nav-list li {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: rgba(13, 13, 13, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-list li:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown a {
+  display: block;
+  color: #eaeaea;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('/images/background3.jpg');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh; /* Viewport height za slikata */
+  position: relative; /* Pozicioniranje relativno */
+  color: white; /* Boja na tekst */
+  display: flex;
+  align-items: center; /* Koregiranje na pozicijata centralno */
+  justify-content: center; /* Horizontalno centriranje na podatocite */
+  text-align: center;
+}
+
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Crna pozadina za podobro citanje na tekstot */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2; /* Tekstot da ne se preklopuva */
+}
+
+
+.btn-primary {
+  padding: 15px 35px;
+  background-color: #f25f5c;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e63946;
+  transform: scale(1.1);
+}
+
+/* Del za destinacii */
+.featured-destinations {
+  padding: 60px;
+  background: linear-gradient(135deg, #14213d, #0b1030);
+  text-align: center;
+  color: #eaeaea;
+}
+
+.featured-destinations h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+  color: #fcb045;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.destination {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.destination:hover {
+  transform: scale(1.05);
+}
+
+.destination img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Galerija */
+.gallery-section {
+  padding: 60px;
+  background: linear-gradient(135deg, #0d0f18, #2b2d42);
+  text-align: center;
+  color: #eaeaea;
+}
+
+.gallery-section h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #fcb045;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox za javascript  */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+/* Krajni sliki */
+.testimonials {
+  padding: 60px;
+  background: linear-gradient(135deg, #0b1030, #14213d);
+  text-align: center;
+  color: #eaeaea;
+  font-style: italic;
+}
+
+.testimonials h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #fcb045;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Del za subskripcija */
+.newsletter {
+  padding: 60px;
+  background: linear-gradient(135deg, #0d0f18, #2b2d42);
+  text-align: center;
+  color: #eaeaea;
+}
+
+.newsletter h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #fcb045;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.newsletter-form button {
+  padding: 15px 35px;
+  background-color: #f25f5c;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e63946;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: rgba(13, 13, 13, 0.9);
+  text-align: center;
+  color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #fcb045;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.destination p {
+  color: #fcb045;
+}
+
+.destination h3 {
+  color: #fcb045;
+}
+
+/* Od dolu nagore button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f25f5c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Skrieno na pocetok no se pojavuva nadolu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Senka */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000; /* Da ne se preklopuva so drugite raboti */
+}
+
+.back-to-top-btn:hover {
+  background-color: #e63946; 
+  transform: scale(1.1); 
+}
+
+/* Feedback poraka */
+.newsletter-form .message {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}

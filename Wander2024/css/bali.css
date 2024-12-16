@@ -1,0 +1,373 @@
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #333;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.9);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-family: 'Lobster', cursive;
+  color: #ff6b6b;
+}
+
+.logo span {
+  color: #fcb045;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #eaeaea;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+  color: #ff6b6b;
+}
+
+/* Pocetok */
+.bali-hero {
+  position: relative;
+  text-align: center;
+  color: orange;
+  height: 110vh; /* Namaluvanje na visinata za da bide po kompaktna */
+  overflow: hidden; /* Preventiranje na dopolnitelna sodrzina da se pojavi */
+}
+
+.bali-hero img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+}
+
+.bali-hero-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px; 
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px; 
+  max-width: 80%; 
+}
+
+.bali-hero h1 {
+  margin: 0 0 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem; /* root em del */
+}
+
+.bali-hero p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.bali-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Voveden del */
+.bali-intro {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  background-color: #f9f4ef;
+  gap: 40px; 
+}
+
+.bali-intro img {
+  max-width: 500px;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; 
+}
+
+.bali-intro div {
+  flex: 1; 
+}
+
+
+.bali-intro h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.bali-intro p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Glaven del */
+.bali-highlights {
+  padding: 60px;
+  background: linear-gradient(135deg, #008080, #40e0d0);
+  text-align: center;
+  color: white;
+}
+
+.bali-highlights h2 {
+  font-size: 2.5rem;
+  color: #ffdd59;
+  margin-bottom: 30px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.highlight {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.highlight img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.highlight h3 {
+  font-size: 1.5rem;
+}
+
+.highlight p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Dopolnitelni sliki del */
+.bali-culture {
+  padding: 60px;
+  background: linear-gradient(135deg, #ff6347, #ffcc33);
+  text-align: center;
+  color: white;
+}
+
+.bali-culture h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.culture-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.culture-item img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: rgba(13, 13, 13, 0.9);
+  text-align: center;
+  color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #fcb045;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: rgba(13, 13, 13, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-list li:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown a {
+  display: block;
+  color: #eaeaea;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+}
+
+/* Del kaj sliki dopolnitelni */
+.bali-highlights1 {
+  padding: 60px;
+  background: linear-gradient(135deg, #008080, #40e0d0);
+  text-align: center;
+  color: white;
+}
+
+.bali-highlights h2 {
+  font-size: 2.5rem;
+  color: #ffdd59;
+  margin-bottom: 30px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.highlight {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.highlight img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.highlight h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.highlight p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.experiences {
+  color: #ffdd59;
+  font-size: 2rem;
+}
+
+/* Kopce da od dolu nagore */
+#scrollTopBtn {
+  background-color: #8ecae6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #219ebc;
+  transform: scale(1.1);
+}
+
+
+/* Animacija za klikanje na maus */
+.tear-splat {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 105, 180, 1) 0%, rgba(255, 182, 193, 1) 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: splat 0.5s ease-out;
+}
+
+@keyframes splat {
+  from {
+      transform: scale(1);
+      opacity: 1;
+  }
+  to {
+      transform: scale(3);
+      opacity: 0;
+  }
+}

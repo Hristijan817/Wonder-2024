@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2em;
+  color: #359381;
+  pointer-events: none;
+  margin-right: 0; 
+}
+
+/* Navigation Bar */
+.navigation {
+  display: flex;
+  align-items: center; 
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #0f1413;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  position: relative;
+}
+
+.navigation a:hover {
+  background: #35937d;
+  color: #fff;
+}
+
+
+.navigation li {
+  list-style-type: none; /* Otstranuvanje na tockata */
+}
+
+/* Krugojte (bubbles) za vo navigation bar */
+.navigation a {
+  text-decoration: none;
+  color: #359381; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  margin: 0 10px;
+  font-weight: 600;
+  position: relative;
+  background-color: #f2f2f2; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+
+.navigation a:hover {
+  background-color: #359381; 
+  color: white; 
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  color: #359381; 
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  background-color: #f2f2f2; /* boja na krugojte */
+}
+
+
+.dropdown a:hover {
+  background-color: #359381; 
+  color: white; 
+}
+
+/* Dropdown elementi */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  border-radius: 10px; 
+}
+
+.dropdown-content a {
+  color: #359381; 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 25px;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #359381; 
+  color: white;
+}
+
+/* pojavuvanje na dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown stil */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  color: #359381; 
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.dropdown a:hover {
+  background: #359381;
+  color: white; 
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: #333; 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #359381;
+  color: white; 
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.sec {
+  position: relative;
+  background: #003329;  
+  padding: 100px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.sec h2 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sec p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* del za pozadinata */
+#hero {
+  background-image: url(/images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex; 
+  justify-content: center; /* Centriranje horizontalno */
+  align-items: center; /* Centriranje vertikalno */
+  padding-top: 50px; /* rastojanie na slikite/pozadinata */
+}
+
+#hero .section-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent 60%, rgb(4, 61, 42));
+  z-index: 1;
+}
+
+#hero .section-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  height: 85vh;
+  width: 85%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+  margin-top: 50px; 
+}
+
+#hero .content-wrap {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.hero-content h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 50px;
+  margin-bottom: 10px; 
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+  margin-top: -10px;
+  margin-bottom: 20px; /* rastojanie pomegu h1 i slikata */
+}
+
+.hero-img {
+  width: 47%;
+  margin-top: -150px;
+  animation: planetAn 60s linear infinite;
+}
+
+@keyframes planetAn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Donacija del */
+.donation {
+  padding: 100px;
+  background-image: url(/images/background.jpg); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white; 
+}
+
+.donation h2 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.donation-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.donation-form {
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  backdrop-filter: blur(8px); /* matna pozadina */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.donation-form h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.donation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+
+.donation-form label {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.donation-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.donation-form button {
+  background-color: #359381;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donation-form button:hover {
+  background-color: #2a6e58;
+}
+
+/* proces na donacija del */
+.info-boxes-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;  
+  flex-wrap: wrap;  
+  margin: 20px 0;
+}
+
+
+.info-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #359381;  
+  flex-basis: 23%;  /* informacijata zafaka 1/4 */
+  min-width: 250px;  
+}
+
+/* centriranje na logoto na slikite vo donacijata */
+.info-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.info-logo {
+  width: 40%;  
+  height: auto;
+}
+
+
+.info-box h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.info-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+

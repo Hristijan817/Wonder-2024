@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f1624, #1a2336);
+  color: #f0f0f0;
+}
+
+/* Header */
+.header {
+  background-color: #1a2336;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  color: #fcb045;
+}
+
+.logo span {
+  color: #ff6b6b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #f0f0f0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list .active {
+  background-color: #ff6b6b;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+/* Main Booking Section */
+.booking-section {
+  padding: 120px 20px 50px;
+  text-align: center;
+}
+
+.booking-container {
+  background-color: #1f2a3c;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.booking-container h1 {
+  font-family: 'Playfair Display', serif;
+  color: #fcb045;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.booking-container p {
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form label {
+  font-size: 1.1rem;
+}
+
+.booking-form select,
+.booking-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ff6b6b;
+  background-color: #1a2336;
+  color: #f0f0f0;
+}
+
+.booking-form button {
+  padding: 15px;
+  background-color: #fcb045;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Price Display */
+.price-display {
+  margin: 20px 0;
+}
+
+.price-display h2 {
+  font-size: 1.5rem;
+  color: #fcb045;
+}
+
+/* New Destination Info */
+#selected-destination {
+  background-color: #2d3a4a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #fcb045;
+}
+
+#destination-info,
+#total-days,
+#price-info {
+  font-size: 1.1rem;
+}
+
+/* Booked Trips Section */
+.booked-trips-section {
+  margin-top: 50px;
+  background-color: #2d3a4a;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fcb045;
+}
+
+.booked-trips-section ul {
+  list-style: none;
+}
+
+.booked-trips-section li {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #3c4c67;
+  border-radius: 5px;
+}
+
+/* Booking Message */
+#booking-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.fail {
+  background-color: #dc3545;
+  color: white;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #1a2336;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ff6b6b
+}
+
+select[disabled] {
+  background-color: #f1f1f1;
+  color: #999;
+  cursor: not-allowed;
+}

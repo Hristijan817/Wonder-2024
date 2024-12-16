@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffccbc);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #ff7043;
+  padding: 20px 40px;
+  border-bottom: 3px solid #f4511e;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: #ffe082;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #ffe082;
+  border-radius: 20px;
+  color: #333;
+}
+
+.nav-list .active {
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+}
+
+/* Wavy Background Section */
+.about-section {
+  padding: 120px 40px 60px;
+  background: linear-gradient(135deg, #ffe082, #ffca28);
+  text-align: center;
+  position: relative;
+}
+
+.about-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+}
+
+.about-section:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.about-section h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Del za timot */
+.team-section {
+  padding: 60px 40px;
+  background-color: #4db6ac;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Grid za timot */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Stil za timot */
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  width: 100%;
+  height: 350px; 
+  object-fit: contain; 
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0; 
+}
+
+
+.team-member h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background-color: #ff7043;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #ffe082;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: rgba(13, 13, 13, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-list li:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown a {
+  display: block;
+  color: #eaeaea;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+}
